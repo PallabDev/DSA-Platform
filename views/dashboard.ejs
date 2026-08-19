@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Chai & Code</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="app">
+    <nav class="navbar">
+      <div class="nav-brand">
+        <svg width="28" height="28" viewBox="0 0 80 80" fill="none">
+          <path d="M18 30 C18 30 16 56 40 56 C64 56 62 30 62 30 Z" fill="#D2691E" stroke="#8B4513" stroke-width="2"/>
+          <ellipse cx="40" cy="30" rx="22" ry="6" fill="#DEB887" stroke="#8B4513" stroke-width="2"/>
+          <path d="M62 36 C72 36 76 44 66 50" stroke="#8B4513" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span>Chai & Code</span>
+      </div>
+      <div class="nav-user">
+        <span id="greeting" class="greeting-text"></span>
+        <button class="btn-reset" onclick="resetProgress()" title="Reset Progress">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M1 4v6h6M23 20v-6h-6"/>
+            <path d="M20.49 9A9 9 0 005.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 013.51 15"/>
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <div class="dashboard">
+      <div class="progress-bar-container">
+        <div class="progress-info">
+          <span>Overall Progress</span>
+          <span id="progressPercent">0%</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-stats">
+          <span id="solvedCount">0 / 84 solved</span>
+          <span id="dayStatus">Day 1 of 30</span>
+        </div>
+      </div>
+
+      <div class="tab-bar">
+        <button class="tab active" data-tab="today" onclick="switchTab('today')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+          Today
+        </button>
+        <button class="tab" data-tab="upcoming" onclick="switchTab('upcoming')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+          Upcoming
+        </button>
+        <button class="tab" data-tab="all" onclick="switchTab('all')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+          </svg>
+          Full Roadmap
+        </button>
+      </div>
+
+      <div class="tab-content active" id="tab-today"></div>
+      <div class="tab-content" id="tab-upcoming"></div>
+      <div class="tab-content" id="tab-all"></div>
+    </div>
+  </div>
+
+  <script>
+    const roadmap = <%- JSON.stringify(roadmap) %>;
+    const allProblems = <%- JSON.stringify(problems) %>;
+
+    let progress = JSON.parse(localStorage.getItem('dsa_progress') || '{}');
+    let username = localStorage.getItem('dsa_username') || 'Coder';
+    let startDate = localStorage.getItem('dsa_start_date') || new Date().toISOString().split('T')[0];
+
+    document.getElementById('greeting').textContent = 'Welcome, ' + username;
+
+    function getCurrentDay() {
+      const start = new Date(startDate);
+      const now = new Date();
+      const diff = Math.floor((now - start) / (1000 * 60 * 60 * 24)) + 1;
+      return Math.max(1, Math.min(diff, 30));
+    }
+
+    function getDayStatus(dayNum) {
+      const currentDay = getCurrentDay();
+      if (dayNum < currentDay) return 'past';
+      if (dayNum === currentDay) return 'today';
+      return 'future';
+    }
+
+    function updateProgress() {
+      const total = 84;
+      const solved = Object.values(progress).filter(v => v).length;
+      const pct = Math.round((solved / total) * 100);
+      document.getElementById('progressPercent').textContent = pct + '%';
+      document.getElementById('progressFill').style.width = pct + '%';
+      document.getElementById('solvedCount').textContent = solved + ' / ' + total + ' solved';
+      document.getElementById('dayStatus').textContent = 'Day ' + getCurrentDay() + ' of 30';
+    }
+
+    function toggleProblem(id) {
+      progress[id] = !progress[id];
+      localStorage.setItem('dsa_progress', JSON.stringify(progress));
+      updateProgress();
+      renderAll();
+    }
+
+    function renderProblemCard(problem, day) {
+      const isSolved = progress[problem.id] || false;
+      const statusClass = isSolved ? 'solved' : '';
+      const diffClass = problem.problem_type;
+      const dayStatus = getDayStatus(day.day);
+      const statusBadge = dayStatus === 'today' ? '<span class="badge badge-today">Today</span>' :
+                          dayStatus === 'past' ? '<span class="badge badge-done">Done</span>' :
+                          '<span class="badge badge-upcoming">Upcoming</span>';
+
+      return '<div class="problem-card ' + statusClass + '">' +
+        '<div class="problem-header">' +
+          '<label class="checkbox-wrap">' +
+            '<input type="checkbox" ' + (isSolved ? 'checked' : '') + ' onchange="toggleProblem(' + problem.id + ')">' +
+            '<span class="checkmark"></span>' +
+          '</label>' +
+          '<div class="problem-info">' +
+            '<span class="problem-name">' + problem.name + '</span>' +
+            '<span class="problem-num">#' + problem.id + '</span>' +
+          '</div>' +
+          '<div class="problem-meta">' +
+            '<span class="diff-tag ' + diffClass + '">' + problem.problem_type + '</span>' +
+            statusBadge +
+          '</div>' +
+        '</div>' +
+        '<div class="problem-links">' +
+          '<a href="' + problem.leetcode + '" target="_blank" class="link-leetcode">' +
+            '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>' +
+            ' LeetCode' +
+          '</a>' +
+          (problem.take_u_forward !== 'Not Found' ?
+            '<a href="' + problem.take_u_forward + '" target="_blank" class="link-video">' +
+              '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>' +
+              ' Video' +
+            '</a>' : '') +
+        '</div>' +
+      '</div>';
+    }
+
+    function renderToday() {
+      const currentDay = getCurrentDay();
+      const dayData = roadmap.days.find(d => d.day === currentDay) || roadmap.days[0];
+      let html = '<div class="section-header">' +
+        '<div>' +
+          '<h2 class="section-title">Day ' + dayData.day + ': ' + dayData.topic + '</h2>' +
+          '<p class="section-desc">' + dayData.description + '</p>' +
+        '</div>' +
+        '<span class="badge badge-today">Today</span>' +
+      '</div>' +
+      '<div class="focus-area"><strong>Focus:</strong> ' + dayData.focus_area + '</div>' +
+      '<div class="problems-grid">';
+
+      dayData.problems.forEach(p => {
+        html += renderProblemCard(p, dayData);
+      });
+
+      html += '</div>';
+      document.getElementById('tab-today').innerHTML = html;
+    }
+
+    function renderUpcoming() {
+      const currentDay = getCurrentDay();
+      let html = '';
+
+      if (currentDay < 30) {
+        const nextDay = roadmap.days.find(d => d.day === currentDay + 1);
+        if (nextDay) {
+          html += '<div class="section-header">' +
+            '<div>' +
+              '<h2 class="section-title">Day ' + nextDay.day + ': ' + nextDay.topic + '</h2>' +
+              '<p class="section-desc">' + nextDay.description + '</p>' +
+            '</div>' +
+            '<span class="badge badge-upcoming">Next</span>' +
+          '</div>' +
+          '<div class="focus-area"><strong>Focus:</strong> ' + nextDay.focus_area + '</div>' +
+          '<div class="problems-grid">';
+
+          nextDay.problems.forEach(p => {
+            html += renderProblemCard(p, nextDay);
+          });
+          html += '</div>';
+        }
+      }
+
+      const backlogDays = roadmap.days.filter(d => d.day < currentDay && !isDayComplete(d));
+      if (backlogDays.length > 0) {
+        html += '<div class="section-header backlog-header">' +
+          '<div>' +
+            '<h2 class="section-title">Backlog</h2>' +
+            '<p class="section-desc">Unsolved problems from previous days</p>' +
+          '</div>' +
+        '</div>';
+
+        backlogDays.forEach(day => {
+          const unsolved = day.problems.filter(p => !progress[p.id]);
+          if (unsolved.length === 0) return;
+          html += '<div class="backlog-day">' +
+            '<h3 class="backlog-day-title">Day ' + day.day + ': ' + day.topic + ' <span class="backlog-count">' + unsolved.length + ' pending</span></h3>' +
+            '<div class="problems-grid">';
+
+          unsolved.forEach(p => {
+            html += renderProblemCard(p, day);
+          });
+          html += '</div></div>';
+        });
+      }
+
+      if (!html) {
+        html = '<div class="empty-state"><p>All caught up! No pending problems.</p></div>';
+      }
+
+      document.getElementById('tab-upcoming').innerHTML = html;
+    }
+
+    function isDayComplete(day) {
+      return day.problems.every(p => progress[p.id]);
+    }
+
+    function renderAll() {
+      let html = '<div class="roadmap-list">';
+
+      roadmap.days.forEach(day => {
+        const dayComplete = isDayComplete(day);
+        const dayStatus = getDayStatus(day.day);
+        const solvedCount = day.problems.filter(p => progress[p.id]).length;
+        const statusIcon = dayComplete ? '&#10003;' : solvedCount + '/' + day.problems.length;
+        let statusCls = dayComplete ? 'day-complete' : '';
+        if (dayStatus === 'today') statusCls += ' day-current';
+
+        html += '<div class="roadmap-day ' + statusCls + '">' +
+          '<div class="day-header" onclick="toggleDay(this)">' +
+            '<div class="day-left">' +
+              '<span class="day-num">' + day.day + '</span>' +
+              '<div class="day-info">' +
+                '<span class="day-topic">' + day.topic + '</span>' +
+                '<span class="day-meta">' + day.problems.length + ' problems &middot; ' + day.focus_area + '</span>' +
+              '</div>' +
+            '</div>' +
+            '<div class="day-right">' +
+              '<span class="day-progress-badge ' + (dayComplete ? 'complete' : '') + '">' + statusIcon + '</span>' +
+              '<svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>' +
+            '</div>' +
+          '</div>' +
+          '<div class="day-problems">';
+
+        day.problems.forEach(p => {
+          html += renderProblemCard(p, day);
+        });
+
+        html += '</div></div>';
+      });
+
+      html += '</div>';
+      document.getElementById('tab-all').innerHTML = html;
+    }
+
+    function toggleDay(header) {
+      const dayEl = header.closest('.roadmap-day');
+      dayEl.classList.toggle('expanded');
+    }
+
+    function switchTab(tab) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelector('[data-tab="' + tab + '"]').classList.add('active');
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      document.getElementById('tab-' + tab).classList.add('active');
+
+      if (tab === 'today') renderToday();
+      if (tab === 'upcoming') renderUpcoming();
+      if (tab === 'all') renderAll();
+    }
+
+    function resetProgress() {
+      if (confirm('Reset all progress? This cannot be undone.')) {
+        progress = {};
+        localStorage.setItem('dsa_progress', '{}');
+        updateProgress();
+        renderAll();
+        switchTab('today');
+      }
+    }
+
+    updateProgress();
+    switchTab('today');
+  </script>
+</body>
+</html>

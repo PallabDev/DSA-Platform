@@ -1,0 +1,590 @@
+[
+  {
+    "id": 1,
+    "name": "Two Sum",
+    "leetcode": "https://leetcode.com/problems/two-sum/",
+    "take_u_forward": "https://www.youtube.com/watch?v=UXDSeD9mN-k",
+    "problem_type": "easy"
+  },
+  {
+    "id": 2,
+    "name": "Contains Duplicate",
+    "leetcode": "https://leetcode.com/problems/contains-duplicate/",
+    "take_u_forward": "https://www.youtube.com/watch?v=49SewqYJpXo",
+    "problem_type": "easy"
+  },
+  {
+    "id": 3,
+    "name": "Valid Anagram",
+    "leetcode": "https://leetcode.com/problems/valid-anagram/",
+    "take_u_forward": "https://www.youtube.com/watch?v=9UtKcDMIXkw",
+    "problem_type": "easy"
+  },
+  {
+    "id": 4,
+    "name": "Group Anagrams",
+    "leetcode": "https://leetcode.com/problems/group-anagrams/",
+    "take_u_forward": "https://www.youtube.com/watch?v=xyU5wXHwymE",
+    "problem_type": "medium"
+  },
+  {
+    "id": 5,
+    "name": "Product of Array Except Self",
+    "leetcode": "https://leetcode.com/problems/product-of-array-except-self/",
+    "take_u_forward": "https://www.youtube.com/watch?v=bNvIQmRvSEw",
+    "problem_type": "medium"
+  },
+  {
+    "id": 6,
+    "name": "Longest Consecutive Sequence",
+    "leetcode": "https://leetcode.com/problems/longest-consecutive/",
+    "take_u_forward": "https://www.youtube.com/watch?v=oO5uQq0hsFQ",
+    "problem_type": "medium"
+  },
+  {
+    "id": 7,
+    "name": "Valid Palindrome",
+    "leetcode": "https://leetcode.com/problems/valid-palindrome/",
+    "take_u_forward": "https://www.youtube.com/watch?v=jJXJ5UJ7DPs",
+    "problem_type": "easy"
+  },
+  {
+    "id": 8,
+    "name": "Two Sum II",
+    "leetcode": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
+    "take_u_forward": "https://www.youtube.com/watch?v=eQtz1Z0DQ84",
+    "problem_type": "medium"
+  },
+  {
+    "id": 9,
+    "name": "3Sum",
+    "leetcode": "https://leetcode.com/problems/3sum/",
+    "take_u_forward": "https://www.youtube.com/watch?v=w2ijEzBMiMA",
+    "problem_type": "medium"
+  },
+  {
+    "id": 10,
+    "name": "Container With Most Water",
+    "leetcode": "https://leetcode.com/problems/container-with-most-water/",
+    "take_u_forward": "https://www.youtube.com/watch?v=99seoYd5qqM",
+    "problem_type": "medium"
+  },
+  {
+    "id": 11,
+    "name": "Sort Colors",
+    "leetcode": "https://leetcode.com/problems/sort-colors/",
+    "take_u_forward": "https://www.youtube.com/watch?v=iF0hQdkJ-Zw",
+    "problem_type": "medium"
+  },
+  {
+    "id": 12,
+    "name": "Move Zeroes",
+    "leetcode": "https://leetcode.com/problems/move-zeroes/",
+    "take_u_forward": "https://www.youtube.com/watch?v=aayNBt9M7ZQ",
+    "problem_type": "easy"
+  },
+  {
+    "id": 13,
+    "name": "Valid Triangle Number",
+    "leetcode": "https://leetcode.com/problems/valid-triangle-number/",
+    "take_u_forward": "https://www.youtube.com/watch?v=Hhp1YZgXkm4",
+    "problem_type": "medium"
+  },
+  {
+    "id": 14,
+    "name": "Trapping Rain Water",
+    "leetcode": "https://leetcode.com/problems/trapping-rain-water/",
+    "take_u_forward": "https://www.youtube.com/watch?v=m18Hnzt90JE",
+    "problem_type": "hard"
+  },
+  {
+    "id": 15,
+    "name": "Encode and Decode Strings",
+    "leetcode": "https://leetcode.com/problems/encode-and-decode-strings/",
+    "take_u_forward": "https://www.youtube.com/watch?v=7C-jvTN4BrE",
+    "problem_type": "medium"
+  },
+  {
+    "id": 16,
+    "name": "Top K Frequent Elements",
+    "leetcode": "https://leetcode.com/problems/top-k-frequent-elements/",
+    "take_u_forward": "https://www.youtube.com/watch?v=9RN6Ft7IHO0",
+    "problem_type": "medium"
+  },
+  {
+    "id": 17,
+    "name": "Valid Parentheses",
+    "leetcode": "https://leetcode.com/problems/valid-parentheses/",
+    "take_u_forward": "https://www.youtube.com/watch?v=P-VH9vyycto",
+    "problem_type": "easy"
+  },
+  {
+    "id": 18,
+    "name": "Min Stack",
+    "leetcode": "https://leetcode.com/problems/min-stack/",
+    "take_u_forward": "https://www.youtube.com/watch?v=W1cECJQAECc",
+    "problem_type": "medium"
+  },
+  {
+    "id": 19,
+    "name": "Evaluate Reverse Polish Notation",
+    "leetcode": "https://leetcode.com/problems/evaluate-reverse-polish-notation/",
+    "take_u_forward": "https://www.youtube.com/watch?v=ohnHt2NZpFw",
+    "problem_type": "medium"
+  },
+  {
+    "id": 20,
+    "name": "Daily Temperatures",
+    "leetcode": "https://leetcode.com/problems/daily-temperatures/",
+    "take_u_forward": "https://www.youtube.com/watch?v=cTBiBSnjO3c",
+    "problem_type": "medium"
+  },
+  {
+    "id": 21,
+    "name": "Decode String",
+    "leetcode": "https://leetcode.com/problems/decode-string/",
+    "take_u_forward": "https://www.youtube.com/watch?v=0u3qvsXwcKQ",
+    "problem_type": "medium"
+  },
+  {
+    "id": 22,
+    "name": "Largest Rectangle in Histogram",
+    "leetcode": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+    "take_u_forward": "https://www.youtube.com/watch?v=jC8M0-CEJXo",
+    "problem_type": "hard"
+  },
+  {
+    "id": 23,
+    "name": "Reverse Linked List",
+    "leetcode": "https://leetcode.com/problems/reverse-linked-list/",
+    "take_u_forward": "https://www.youtube.com/watch?v=iRYJj0i-5BE",
+    "problem_type": "easy"
+  },
+  {
+    "id": 24,
+    "name": "Merge Two Sorted Lists",
+    "leetcode": "https://leetcode.com/problems/merge-two-sorted-lists/",
+    "take_u_forward": "https://www.youtube.com/watch?v=Xb4slcp1U38",
+    "problem_type": "easy"
+  },
+  {
+    "id": 25,
+    "name": "Linked List Cycle",
+    "leetcode": "https://leetcode.com/problems/linked-list-cycle/",
+    "take_u_forward": "https://www.youtube.com/watch?v=DYn9CO8Q8xY",
+    "problem_type": "easy"
+  },
+  {
+    "id": 26,
+    "name": "Remove Nth Node From End",
+    "leetcode": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+    "take_u_forward": "https://www.youtube.com/watch?v=Lhu3MsXZy-Q",
+    "problem_type": "medium"
+  },
+  {
+    "id": 27,
+    "name": "Reorder List",
+    "leetcode": "https://leetcode.com/problems/reorder-list/",
+    "take_u_forward": "https://www.youtube.com/watch?v=Cf0Bg0zYXvM",
+    "problem_type": "medium"
+  },
+  {
+    "id": 28,
+    "name": "Add Two Numbers",
+    "leetcode": "https://leetcode.com/problems/add-two-numbers/",
+    "take_u_forward": "https://www.youtube.com/watch?v=wgFPL90Gpc0",
+    "problem_type": "medium"
+  },
+  {
+    "id": 29,
+    "name": "Palindrome Linked List",
+    "leetcode": "https://leetcode.com/problems/palindrome-linked-list/",
+    "take_u_forward": "https://www.youtube.com/watch?v=VsTrGn5L2F4",
+    "problem_type": "easy"
+  },
+  {
+    "id": 30,
+    "name": "Swap Nodes in Pairs",
+    "leetcode": "https://leetcode.com/problems/swap-nodes-in-pairs/",
+    "take_u_forward": "https://www.youtube.com/watch?v=MXmUvCJjKjM",
+    "problem_type": "medium"
+  },
+  {
+    "id": 31,
+    "name": "LRU Cache",
+    "leetcode": "https://leetcode.com/problems/lru-cache/",
+    "take_u_forward": "https://www.youtube.com/watch?v=xDEuqo52Syk",
+    "problem_type": "medium"
+  },
+  {
+    "id": 32,
+    "name": "Max Sum Subarray of Size K",
+    "leetcode": "https://leetcode.com/problems/maximum-sum-of-subarray-of-size-k/",
+    "take_u_forward": "https://www.youtube.com/watch?v=KyUTLwszfA8",
+    "problem_type": "easy"
+  },
+  {
+    "id": 33,
+    "name": "Longest Substring Without Repeats",
+    "leetcode": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+    "take_u_forward": "https://www.youtube.com/watch?v=mtW6eSV-utc",
+    "problem_type": "medium"
+  },
+  {
+    "id": 34,
+    "name": "Longest Repeating Character Replacement",
+    "leetcode": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+    "take_u_forward": "https://www.youtube.com/watch?v=gqXU1UY9Ufc",
+    "problem_type": "medium"
+  },
+  {
+    "id": 35,
+    "name": "Permutation in String",
+    "leetcode": "https://leetcode.com/problems/permutation-in-string/",
+    "take_u_forward": "https://www.youtube.com/watch?v=UbxqkbtRRN4",
+    "problem_type": "medium"
+  },
+  {
+    "id": 36,
+    "name": "Minimum Window Substring",
+    "leetcode": "https://leetcode.com/problems/minimum-window-substring/",
+    "take_u_forward": "https://www.youtube.com/watch?v=j6hK7qYvIc8",
+    "problem_type": "hard"
+  },
+  {
+    "id": 37,
+    "name": "Sliding Window Maximum",
+    "leetcode": "https://leetcode.com/problems/sliding-window-maximum/",
+    "take_u_forward": "https://www.youtube.com/watch?v=aQjJR7h1N5E",
+    "problem_type": "hard"
+  },
+  {
+    "id": 38,
+    "name": "Max Points From Cards",
+    "leetcode": "https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/",
+    "take_u_forward": "Not Found",
+    "problem_type": "medium"
+  },
+  {
+    "id": 39,
+    "name": "Max Sum of Distinct Subarrays, Size K",
+    "leetcode": "https://leetcode.com/problems/maximum-sum-of-distinct-subarrays-with-length-k/",
+    "take_u_forward": "Not Found",
+    "problem_type": "medium"
+  },
+  {
+    "id": 40,
+    "name": "Invert Binary Tree",
+    "leetcode": "https://leetcode.com/problems/invert-binary-tree/",
+    "take_u_forward": "https://www.youtube.com/watch?v=sKzSHe8AaKE",
+    "problem_type": "easy"
+  },
+  {
+    "id": 41,
+    "name": "Maximum Depth of Binary Tree",
+    "leetcode": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+    "take_u_forward": "https://www.youtube.com/watch?v=eD3tmO66aBA",
+    "problem_type": "easy"
+  },
+  {
+    "id": 42,
+    "name": "Diameter of a Binary Tree",
+    "leetcode": "https://leetcode.com/problems/diameter-of-binary-tree/",
+    "take_u_forward": "https://www.youtube.com/watch?v=bkxqA6Vkjlg",
+    "problem_type": "easy"
+  },
+  {
+    "id": 43,
+    "name": "Same Tree",
+    "leetcode": "https://leetcode.com/problems/same-tree/",
+    "take_u_forward": "https://www.youtube.com/watch?v=vRbbcuXH_gc",
+    "problem_type": "easy"
+  },
+  {
+    "id": 44,
+    "name": "Path Sum",
+    "leetcode": "https://leetcode.com/problems/path-sum/",
+    "take_u_forward": "https://www.youtube.com/watch?v=lNqKunCDDFQ",
+    "problem_type": "easy"
+  },
+  {
+    "id": 45,
+    "name": "Lowest Common Ancestor of a Binary Tree",
+    "leetcode": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/",
+    "take_u_forward": "https://www.youtube.com/watch?v=_-QHVMptkC4",
+    "problem_type": "medium"
+  },
+  {
+    "id": 46,
+    "name": "Validate Binary Search Tree",
+    "leetcode": "https://leetcode.com/problems/validate-binary-search-tree/",
+    "take_u_forward": "https://www.youtube.com/watch?v=f-sj7I5oXEI",
+    "problem_type": "medium"
+  },
+  {
+    "id": 47,
+    "name": "Path Sum II",
+    "leetcode": "https://leetcode.com/problems/path-sum-ii/",
+    "take_u_forward": "https://www.youtube.com/watch?v=c1M5-cJyYkQ",
+    "problem_type": "medium"
+  },
+  {
+    "id": 48,
+    "name": "Binary Tree Maximum Path Sum",
+    "leetcode": "https://leetcode.com/problems/binary-tree-maximum-path-sum/",
+    "take_u_forward": "https://www.youtube.com/watch?v=WszrfSwMz58",
+    "problem_type": "hard"
+  },
+  {
+    "id": 49,
+    "name": "Serialize and Deserialize Binary Tree",
+    "leetcode": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
+    "take_u_forward": "https://www.youtube.com/watch?v=u4JAW2-yS8M",
+    "problem_type": "hard"
+  },
+  {
+    "id": 50,
+    "name": "Flood Fill",
+    "leetcode": "https://leetcode.com/problems/flood-fill/",
+    "take_u_forward": "https://www.youtube.com/watch?v=R7AxtnRZJso",
+    "problem_type": "easy"
+  },
+  {
+    "id": 51,
+    "name": "Number of Islands",
+    "leetcode": "https://leetcode.com/problems/number-of-islands/",
+    "take_u_forward": "https://www.youtube.com/watch?v=Rs6alU_V8l8",
+    "problem_type": "medium"
+  },
+  {
+    "id": 52,
+    "name": "Pacific Atlantic Water Flow",
+    "leetcode": "https://leetcode.com/problems/pacific-atlantic-water-flow/",
+    "take_u_forward": "https://www.youtube.com/watch?v=q6SzE6pCnN4",
+    "problem_type": "medium"
+  },
+  {
+    "id": 53,
+    "name": "Surrounded Regions",
+    "leetcode": "https://leetcode.com/problems/surrounded-regions/",
+    "take_u_forward": "https://www.youtube.com/watch?v=tnrdaVwJlWY",
+    "problem_type": "medium"
+  },
+  {
+    "id": 54,
+    "name": "Binary Search",
+    "leetcode": "https://leetcode.com/problems/binary-search/",
+    "take_u_forward": "https://www.youtube.com/watch?v=Z4UX-1F02Aw",
+    "problem_type": "easy"
+  },
+  {
+    "id": 55,
+    "name": "Search a 2D Matrix",
+    "leetcode": "https://leetcode.com/problems/search-a-2d-matrix/",
+    "take_u_forward": "https://www.youtube.com/watch?v=zo2-1bCJODM",
+    "problem_type": "medium"
+  },
+  {
+    "id": 56,
+    "name": "Search in Rotated Sorted Array",
+    "leetcode": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+    "take_u_forward": "https://www.youtube.com/watch?v=u8CTjMUGszo",
+    "problem_type": "medium"
+  },
+  {
+    "id": 57,
+    "name": "Find Minimum in Rotated Sorted Array",
+    "leetcode": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/",
+    "take_u_forward": "https://www.youtube.com/watch?v=r2D2iLBUYJ8",
+    "problem_type": "medium"
+  },
+  {
+    "id": 58,
+    "name": "Apple Harvest (Koko Eating Bananas)",
+    "leetcode": "https://leetcode.com/problems/koko-eating-bananas/",
+    "take_u_forward": "https://www.youtube.com/watch?v=K5S5E9zXXYg",
+    "problem_type": "medium"
+  },
+  {
+    "id": 59,
+    "name": "Kth Smallest in a Sorted Matrix",
+    "leetcode": "https://leetcode.com/problems/kth-smallest-element-in-a-sorted-matrix/",
+    "take_u_forward": "Not Found",
+    "problem_type": "medium"
+  },
+  {
+    "id": 60,
+    "name": "Minimum Shipping Capacity",
+    "leetcode": "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/",
+    "take_u_forward": "https://www.youtube.com/watch?v=yNzWMG-0eC8",
+    "problem_type": "medium"
+  },
+  {
+    "id": 61,
+    "name": "Split Array Largest Sum",
+    "leetcode": "https://leetcode.com/problems/split-array-largest-sum/",
+    "take_u_forward": "https://www.youtube.com/watch?v=Q2eTn7OKHNo",
+    "problem_type": "hard"
+  },
+  {
+    "id": 62,
+    "name": "Kth Largest Element in an Array",
+    "leetcode": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+    "take_u_forward": "https://www.youtube.com/watch?v=XEmy13g-a2c",
+    "problem_type": "medium"
+  },
+  {
+    "id": 63,
+    "name": "K Closest Points to Origin",
+    "leetcode": "https://leetcode.com/problems/k-closest-points-to-origin/",
+    "take_u_forward": "https://www.youtube.com/watch?v=rI2EBUVsqYE",
+    "problem_type": "medium"
+  },
+  {
+    "id": 64,
+    "name": "Find K Closest Elements",
+    "leetcode": "https://leetcode.com/problems/find-k-closest-elements/",
+    "take_u_forward": "Not Found",
+    "problem_type": "medium"
+  },
+  {
+    "id": 65,
+    "name": "Merge K Sorted Lists",
+    "leetcode": "https://leetcode.com/problems/merge-k-sorted-lists/",
+    "take_u_forward": "https://www.youtube.com/watch?v=q5a5OiGbT6Q",
+    "problem_type": "hard"
+  },
+  {
+    "id": 66,
+    "name": "Task Scheduler",
+    "leetcode": "https://leetcode.com/problems/task-scheduler/",
+    "take_u_forward": "https://www.youtube.com/watch?v=s8P8b9dqqS8",
+    "problem_type": "medium"
+  },
+  {
+    "id": 67,
+    "name": "Median from Data Stream",
+    "leetcode": "https://leetcode.com/problems/find-median-from-data-stream/",
+    "take_u_forward": "https://www.youtube.com/watch?v=itmhHiLsRSg",
+    "problem_type": "hard"
+  },
+  {
+    "id": 68,
+    "name": "Insert Interval",
+    "leetcode": "https://leetcode.com/problems/insert-interval/",
+    "take_u_forward": "https://www.youtube.com/watch?v=dAW1p_xFHg0",
+    "problem_type": "medium"
+  },
+  {
+    "id": 69,
+    "name": "Merge Intervals",
+    "leetcode": "https://leetcode.com/problems/merge-intervals/",
+    "take_u_forward": "https://www.youtube.com/watch?v=44H3cNqySwY",
+    "problem_type": "medium"
+  },
+  {
+    "id": 70,
+    "name": "Non-overlapping Intervals",
+    "leetcode": "https://leetcode.com/problems/non-overlapping-intervals/",
+    "take_u_forward": "https://www.youtube.com/watch?v=_UYlNNJ7W5E",
+    "problem_type": "medium"
+  },
+  {
+    "id": 71,
+    "name": "Meeting Rooms",
+    "leetcode": "https://leetcode.com/problems/meeting-rooms/",
+    "take_u_forward": "https://www.youtube.com/watch?v=0xi3H9DtAfE",
+    "problem_type": "easy"
+  },
+  {
+    "id": 72,
+    "name": "Meeting Rooms II",
+    "leetcode": "https://leetcode.com/problems/meeting-rooms-ii/",
+    "take_u_forward": "https://www.youtube.com/watch?v=aTfn-dRpTsU",
+    "problem_type": "medium"
+  },
+  {
+    "id": 73,
+    "name": "Climbing Stairs",
+    "leetcode": "https://leetcode.com/problems/climbing-stairs/",
+    "take_u_forward": "https://www.youtube.com/watch?v=mDxtgFpG0SY",
+    "problem_type": "easy"
+  },
+  {
+    "id": 74,
+    "name": "House Robber",
+    "leetcode": "https://leetcode.com/problems/house-robber/",
+    "take_u_forward": "https://www.youtube.com/watch?v=5x2qxNQWnZQ",
+    "problem_type": "medium"
+  },
+  {
+    "id": 75,
+    "name": "Coin Change",
+    "leetcode": "https://leetcode.com/problems/coin-change/",
+    "take_u_forward": "https://www.youtube.com/watch?v=jgiZlGKSlKM",
+    "problem_type": "medium"
+  },
+  {
+    "id": 76,
+    "name": "Longest Increasing Subsequence",
+    "leetcode": "https://leetcode.com/problems/longest-increasing-subsequence/",
+    "take_u_forward": "https://www.youtube.com/watch?v=IFfYfonAFGE",
+    "problem_type": "medium"
+  },
+  {
+    "id": 77,
+    "name": "Longest Common Subsequence",
+    "leetcode": "https://leetcode.com/problems/longest-common-subsequence/",
+    "take_u_forward": "https://www.youtube.com/watch?v=rW1uJ0ANxME",
+    "problem_type": "medium"
+  },
+  {
+    "id": 78,
+    "name": "Unique Paths",
+    "leetcode": "https://leetcode.com/problems/unique-paths/",
+    "take_u_forward": "https://www.youtube.com/watch?v=2ZH0PE0YcSE",
+    "problem_type": "medium"
+  },
+  {
+    "id": 79,
+    "name": "Word Break",
+    "leetcode": "https://leetcode.com/problems/word-break/",
+    "take_u_forward": "https://www.youtube.com/watch?v=Sx4PZjCF-qo",
+    "problem_type": "medium"
+  },
+  {
+    "id": 80,
+    "name": "Subsets",
+    "leetcode": "https://leetcode.com/problems/subsets/",
+    "take_u_forward": "https://www.youtube.com/watch?v=REOH22Xwdkk",
+    "problem_type": "medium"
+  },
+  {
+    "id": 81,
+    "name": "Permutations",
+    "leetcode": "https://leetcode.com/problems/permutations/",
+    "take_u_forward": "https://www.youtube.com/watch?v=f2ic2Rsc9pU",
+    "problem_type": "medium"
+  },
+  {
+    "id": 82,
+    "name": "Combination Sum",
+    "leetcode": "https://leetcode.com/problems/combination-sum/",
+    "take_u_forward": "https://www.youtube.com/watch?v=0CbXcKo6-0w",
+    "problem_type": "medium"
+  },
+  {
+    "id": 83,
+    "name": "Word Search",
+    "leetcode": "https://leetcode.com/problems/word-search/",
+    "take_u_forward": "https://www.youtube.com/watch?v=pfiQ_PS1sNw",
+    "problem_type": "medium"
+  },
+  {
+    "id": 84,
+    "name": "Palindrome Partitioning",
+    "leetcode": "https://leetcode.com/problems/palindrome-partitioning/",
+    "take_u_forward": "https://www.youtube.com/watch?v=niInc8GzvyI",
+    "problem_type": "medium"
+  }
+]

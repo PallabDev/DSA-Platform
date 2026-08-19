@@ -1,0 +1,13 @@
+{
+  "name": "dsa-platform",
+  "version": "1.0.0",
+  "description": "30-Day DSA Mastery Roadmap",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ejs": "^3.1.9"
+  }
+}
