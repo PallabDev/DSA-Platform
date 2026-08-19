@@ -1,0 +1,682 @@
+{
+  "version": "60-day-comprehensive",
+  "title": "60-Day DSA Roadmap (Comprehensive)",
+  "description": "Complete coverage of all problems for thorough preparation",
+  "total_days": 60,
+  "total_problems": 193,
+  "days": [
+    {
+      "day": 1,
+      "topic": "Arrays Basics (Part 1)",
+      "description": "Two Sum, Subarray, Buy/Sell Stock - First half",
+      "focus_area": "Master Arrays Basics",
+      "problem_ids": [
+        "QUESTION_5430_ID",
+        "QUESTION_2947_ID",
+        "QUESTION_8977_ID"
+      ]
+    },
+    {
+      "day": 2,
+      "topic": "Arrays Basics (Part 2)",
+      "description": "Two Sum, Subarray, Buy/Sell Stock - Second half",
+      "focus_area": "Master Arrays Basics",
+      "problem_ids": [
+        "QUESTION_4160_ID",
+        "QUESTION_1324_ID",
+        "QUESTION_2877_ID"
+      ]
+    },
+    {
+      "day": 3,
+      "topic": "Arrays Intermediate (Part 1)",
+      "description": "Kadane, Sort Colors, Majority Element - First half",
+      "focus_area": "Master Arrays Intermediate",
+      "problem_ids": [
+        "QUESTION_2285_ID",
+        "QUESTION_7815_ID",
+        "QUESTION_2510_ID"
+      ]
+    },
+    {
+      "day": 4,
+      "topic": "Arrays Intermediate (Part 2)",
+      "description": "Kadane, Sort Colors, Majority Element - Second half",
+      "focus_area": "Master Arrays Intermediate",
+      "problem_ids": [
+        "QUESTION_6712_ID",
+        "QUESTION_6185_ID",
+        "QUESTION_6433_ID"
+      ]
+    },
+    {
+      "day": 5,
+      "topic": "Arrays Advanced (Part 1)",
+      "description": "Merge Intervals, Next Permutation - First half",
+      "focus_area": "Master Arrays Advanced",
+      "problem_ids": [
+        "QUESTION_3970_ID",
+        "QUESTION_1242_ID",
+        "QUESTION_5727_ID"
+      ]
+    },
+    {
+      "day": 6,
+      "topic": "Arrays Advanced (Part 2)",
+      "description": "Merge Intervals, Next Permutation - Second half",
+      "focus_area": "Master Arrays Advanced",
+      "problem_ids": [
+        "QUESTION_9315_ID",
+        "QUESTION_6612_ID",
+        "QUESTION_9567_ID"
+      ]
+    },
+    {
+      "day": 7,
+      "topic": "Arrays Matrix (Part 1)",
+      "description": "Rotate Matrix, Spiral, Set Matrix Zeroes - First half",
+      "focus_area": "Master Arrays Matrix",
+      "problem_ids": [
+        "QUESTION_2715_ID",
+        "QUESTION_1243_ID",
+        "QUESTION_3686_ID"
+      ]
+    },
+    {
+      "day": 8,
+      "topic": "Arrays Matrix (Part 2)",
+      "description": "Rotate Matrix, Spiral, Set Matrix Zeroes - Second half",
+      "focus_area": "Master Arrays Matrix",
+      "problem_ids": [
+        "QUESTION_2768_ID",
+        "QUESTION_6737_ID"
+      ]
+    },
+    {
+      "day": 9,
+      "topic": "Arrays Sliding Window (Part 1)",
+      "description": "Prefix Sum, Consecutive Ones - First half",
+      "focus_area": "Master Arrays Sliding Window",
+      "problem_ids": [
+        "QUESTION_3734_ID",
+        "QUESTION_3100_ID"
+      ]
+    },
+    {
+      "day": 10,
+      "topic": "Arrays Sliding Window (Part 2)",
+      "description": "Prefix Sum, Consecutive Ones - Second half",
+      "focus_area": "Master Arrays Sliding Window",
+      "problem_ids": [
+        "QUESTION_3108_ID",
+        "QUESTION_8953_ID"
+      ]
+    },
+    {
+      "day": 11,
+      "topic": "Strings Basics (Part 1)",
+      "description": "Reverse, Anagram, Longest Substring - First half",
+      "focus_area": "Master Strings Basics",
+      "problem_ids": [
+        "QUESTION_2131_ID",
+        "QUESTION_6640_ID",
+        "QUESTION_2734_ID"
+      ]
+    },
+    {
+      "day": 12,
+      "topic": "Strings Basics (Part 2)",
+      "description": "Reverse, Anagram, Longest Substring - Second half",
+      "focus_area": "Master Strings Basics",
+      "problem_ids": [
+        "QUESTION_8621_ID",
+        "QUESTION_1140_ID",
+        "QUESTION_4157_ID"
+      ]
+    },
+    {
+      "day": 13,
+      "topic": "Strings Advanced (Part 1)",
+      "description": "Palindrome, Wildcard, String to Int - First half",
+      "focus_area": "Master Strings Advanced",
+      "problem_ids": [
+        "QUESTION_5762_ID",
+        "QUESTION_7763_ID",
+        "QUESTION_7639_ID"
+      ]
+    },
+    {
+      "day": 14,
+      "topic": "Strings Advanced (Part 2)",
+      "description": "Palindrome, Wildcard, String to Int - Second half",
+      "focus_area": "Master Strings Advanced",
+      "problem_ids": [
+        "QUESTION_9145_ID",
+        "QUESTION_8608_ID",
+        "QUESTION_1740467040955_ID"
+      ]
+    },
+    {
+      "day": 15,
+      "topic": "Binary Search (Part 1)",
+      "description": "Classic, Rotated, Search 2D Matrix - First half",
+      "focus_area": "Master Binary Search",
+      "problem_ids": [
+        "QUESTION_7033_ID",
+        "QUESTION_8531_ID",
+        "QUESTION_9234_ID",
+        "QUESTION_1531_ID"
+      ]
+    },
+    {
+      "day": 16,
+      "topic": "Binary Search (Part 2)",
+      "description": "Classic, Rotated, Search 2D Matrix - Second half",
+      "focus_area": "Master Binary Search",
+      "problem_ids": [
+        "QUESTION_6294_ID",
+        "QUESTION_8427_ID",
+        "QUESTION_7965_ID"
+      ]
+    },
+    {
+      "day": 17,
+      "topic": "Recursion Basics (Part 1)",
+      "description": "Subsets, Combination Sum, Phone Letter - First half",
+      "focus_area": "Master Recursion Basics",
+      "problem_ids": [
+        "QUESTION_7528_ID",
+        "QUESTION_8038_ID",
+        "QUESTION_1415_ID"
+      ]
+    },
+    {
+      "day": 18,
+      "topic": "Recursion Basics (Part 2)",
+      "description": "Subsets, Combination Sum, Phone Letter - Second half",
+      "focus_area": "Master Recursion Basics",
+      "problem_ids": [
+        "QUESTION_8263_ID",
+        "QUESTION_7502_ID",
+        "QUESTION_4260_ID"
+      ]
+    },
+    {
+      "day": 19,
+      "topic": "Backtracking (Part 1)",
+      "description": "N-Queen, Sudoku, Word Search - First half",
+      "focus_area": "Master Backtracking",
+      "problem_ids": [
+        "QUESTION_8634_ID",
+        "QUESTION_2764_ID",
+        "QUESTION_2971_ID"
+      ]
+    },
+    {
+      "day": 20,
+      "topic": "Backtracking (Part 2)",
+      "description": "N-Queen, Sudoku, Word Search - Second half",
+      "focus_area": "Master Backtracking",
+      "problem_ids": [
+        "QUESTION_5716_ID",
+        "QUESTION_8297_ID"
+      ]
+    },
+    {
+      "day": 21,
+      "topic": "Linked List Basics (Part 1)",
+      "description": "Reverse, Middle, Merge Sorted - First half",
+      "focus_area": "Master Linked List Basics",
+      "problem_ids": [
+        "QUESTION_6546_ID",
+        "QUESTION_8591_ID",
+        "QUESTION_9975_ID"
+      ]
+    },
+    {
+      "day": 22,
+      "topic": "Linked List Basics (Part 2)",
+      "description": "Reverse, Middle, Merge Sorted - Second half",
+      "focus_area": "Master Linked List Basics",
+      "problem_ids": [
+        "QUESTION_3185_ID",
+        "QUESTION_7648_ID",
+        "QUESTION_8065_ID"
+      ]
+    },
+    {
+      "day": 23,
+      "topic": "Linked List Advanced (Part 1)",
+      "description": "Copy Random, Add Numbers, Flattening - First half",
+      "focus_area": "Master Linked List Advanced",
+      "problem_ids": [
+        "QUESTION_1801_ID",
+        "QUESTION_3479_ID",
+        "QUESTION_6228_ID"
+      ]
+    },
+    {
+      "day": 24,
+      "topic": "Linked List Advanced (Part 2)",
+      "description": "Copy Random, Add Numbers, Flattening - Second half",
+      "focus_area": "Master Linked List Advanced",
+      "problem_ids": [
+        "QUESTION_7537_ID",
+        "QUESTION_1450_ID",
+        "QUESTION_9422_ID"
+      ]
+    },
+    {
+      "day": 25,
+      "topic": "Stacks Basics (Part 1)",
+      "description": "Parentheses, Min Stack, Evaluate RPN - First half",
+      "focus_area": "Master Stacks Basics",
+      "problem_ids": [
+        "QUESTION_6097_ID",
+        "QUESTION_3763_ID",
+        "QUESTION_4213_ID"
+      ]
+    },
+    {
+      "day": 26,
+      "topic": "Stacks Basics (Part 2)",
+      "description": "Parentheses, Min Stack, Evaluate RPN - Second half",
+      "focus_area": "Master Stacks Basics",
+      "problem_ids": [
+        "QUESTION_8208_ID",
+        "QUESTION_7936_ID",
+        "QUESTION_6584_ID"
+      ]
+    },
+    {
+      "day": 27,
+      "topic": "Stacks Advanced (Part 1)",
+      "description": "Next Greater, Simplify Path - First half",
+      "focus_area": "Master Stacks Advanced",
+      "problem_ids": [
+        "QUESTION_5241_ID",
+        "QUESTION_3422_ID",
+        "QUESTION_1066_ID"
+      ]
+    },
+    {
+      "day": 28,
+      "topic": "Stacks Advanced (Part 2)",
+      "description": "Next Greater, Simplify Path - Second half",
+      "focus_area": "Master Stacks Advanced",
+      "problem_ids": [
+        "QUESTION_6263_ID",
+        "QUESTION_3650_ID"
+      ]
+    },
+    {
+      "day": 29,
+      "topic": "Stacks Mastery (Part 1)",
+      "description": "Largest Rectangle, Sliding Window Max - First half",
+      "focus_area": "Master Stacks Mastery",
+      "problem_ids": [
+        "QUESTION_1266_ID",
+        "QUESTION_5397_ID",
+        "QUESTION_4838_ID"
+      ]
+    },
+    {
+      "day": 30,
+      "topic": "Stacks Mastery (Part 2)",
+      "description": "Largest Rectangle, Sliding Window Max - Second half",
+      "focus_area": "Master Stacks Mastery",
+      "problem_ids": [
+        "QUESTION_2939_ID",
+        "QUESTION_7249_ID"
+      ]
+    },
+    {
+      "day": 31,
+      "topic": "Trees Basics (Part 1)",
+      "description": "Traversals, Max Depth, Same Tree - First half",
+      "focus_area": "Master Trees Basics",
+      "problem_ids": [
+        "QUESTION_1044_ID",
+        "QUESTION_1218_ID",
+        "QUESTION_3926_ID"
+      ]
+    },
+    {
+      "day": 32,
+      "topic": "Trees Basics (Part 2)",
+      "description": "Traversals, Max Depth, Same Tree - Second half",
+      "focus_area": "Master Trees Basics",
+      "problem_ids": [
+        "QUESTION_1555_ID",
+        "QUESTION_4122_ID",
+        "QUESTION_4244_ID"
+      ]
+    },
+    {
+      "day": 33,
+      "topic": "Trees Views (Part 1)",
+      "description": "Zigzag, Right View, Bottom View - First half",
+      "focus_area": "Master Trees Views",
+      "problem_ids": [
+        "QUESTION_5797_ID",
+        "QUESTION_1638_ID",
+        "QUESTION_6037_ID"
+      ]
+    },
+    {
+      "day": 34,
+      "topic": "Trees Views (Part 2)",
+      "description": "Zigzag, Right View, Bottom View - Second half",
+      "focus_area": "Master Trees Views",
+      "problem_ids": [
+        "QUESTION_5574_ID",
+        "QUESTION_2424_ID",
+        "QUESTION_8459_ID"
+      ]
+    },
+    {
+      "day": 35,
+      "topic": "Trees Paths (Part 1)",
+      "description": "Path Sum, Root to Leaf, Diameter - First half",
+      "focus_area": "Master Trees Paths",
+      "problem_ids": [
+        "QUESTION_6275_ID",
+        "QUESTION_8822_ID",
+        "QUESTION_4014_ID"
+      ]
+    },
+    {
+      "day": 36,
+      "topic": "Trees Paths (Part 2)",
+      "description": "Path Sum, Root to Leaf, Diameter - Second half",
+      "focus_area": "Master Trees Paths",
+      "problem_ids": [
+        "QUESTION_3508_ID",
+        "QUESTION_5343_ID",
+        "QUESTION_6695_ID"
+      ]
+    },
+    {
+      "day": 37,
+      "topic": "Trees Advanced (Part 1)",
+      "description": "Serialize, Construct, Flatten BT - First half",
+      "focus_area": "Master Trees Advanced",
+      "problem_ids": [
+        "QUESTION_4792_ID",
+        "QUESTION_5737_ID",
+        "QUESTION_3809_ID"
+      ]
+    },
+    {
+      "day": 38,
+      "topic": "Trees Advanced (Part 2)",
+      "description": "Serialize, Construct, Flatten BT - Second half",
+      "focus_area": "Master Trees Advanced",
+      "problem_ids": [
+        "QUESTION_4943_ID",
+        "QUESTION_6321_ID",
+        "QUESTION_7072_ID"
+      ]
+    },
+    {
+      "day": 39,
+      "topic": "BST Basics (Part 1) + BST Basics",
+      "description": "Search, Validate, Kth Element - First half",
+      "focus_area": "Master BST Basics",
+      "problem_ids": [
+        "QUESTION_2054_ID",
+        "QUESTION_8692_ID",
+        "QUESTION_2236_ID",
+        "QUESTION_8793_ID",
+        "QUESTION_8821_ID"
+      ]
+    },
+    {
+      "day": 40,
+      "topic": "BST Intermediate (Part 1) + BST Intermediate",
+      "description": "Floor, LCA, Two Sum in BST - First half",
+      "focus_area": "Master BST Intermediate",
+      "problem_ids": [
+        "QUESTION_4693_ID",
+        "QUESTION_7154_ID",
+        "QUESTION_7227_ID",
+        "QUESTION_1619_ID",
+        "QUESTION_8303_ID"
+      ]
+    },
+    {
+      "day": 41,
+      "topic": "BST Advanced (Part 1) + BST Advanced",
+      "description": "Recover, Serialize, BST from Preorder - First half",
+      "focus_area": "Master BST Advanced",
+      "problem_ids": [
+        "QUESTION_8368_ID",
+        "QUESTION_6517_ID",
+        "QUESTION_9641_ID",
+        "QUESTION_7969_ID",
+        "QUESTION_2793_ID"
+      ]
+    },
+    {
+      "day": 42,
+      "topic": "Heaps (Part 1)",
+      "description": "Kth Largest, Merge K Lists, Task Scheduler - First half",
+      "focus_area": "Master Heaps",
+      "problem_ids": [
+        "QUESTION_5879_ID",
+        "QUESTION_2678_ID",
+        "QUESTION_7654_ID"
+      ]
+    },
+    {
+      "day": 43,
+      "topic": "Heaps (Part 2)",
+      "description": "Kth Largest, Merge K Lists, Task Scheduler - Second half",
+      "focus_area": "Master Heaps",
+      "problem_ids": [
+        "QUESTION_8731_ID",
+        "QUESTION_1717_ID",
+        "QUESTION_7928_ID"
+      ]
+    },
+    {
+      "day": 44,
+      "topic": "Tries (Part 1) + Tries",
+      "description": "Implement Trie, Word Search, Autocomplete - First half",
+      "focus_area": "Master Tries",
+      "problem_ids": [
+        "QUESTION_9595_ID",
+        "QUESTION_2245_ID",
+        "QUESTION_5569_ID",
+        "QUESTION_1247_ID",
+        "QUESTION_2530_ID"
+      ]
+    },
+    {
+      "day": 45,
+      "topic": "Graphs Basics (Part 1)",
+      "description": "BFS, DFS, Connected Components - First half",
+      "focus_area": "Master Graphs Basics",
+      "problem_ids": [
+        "QUESTION_5176_ID",
+        "QUESTION_1145_ID",
+        "QUESTION_4644_ID"
+      ]
+    },
+    {
+      "day": 46,
+      "topic": "Graphs Basics (Part 2)",
+      "description": "BFS, DFS, Connected Components - Second half",
+      "focus_area": "Master Graphs Basics",
+      "problem_ids": [
+        "QUESTION_2573_ID",
+        "QUESTION_8211_ID",
+        "QUESTION_6919_ID"
+      ]
+    },
+    {
+      "day": 47,
+      "topic": "Graphs Traversal (Part 1)",
+      "description": "Flood Fill, Rotten Oranges, Surrounded - First half",
+      "focus_area": "Master Graphs Traversal",
+      "problem_ids": [
+        "QUESTION_6873_ID",
+        "QUESTION_6936_ID",
+        "QUESTION_7728_ID"
+      ]
+    },
+    {
+      "day": 48,
+      "topic": "Graphs Traversal (Part 2)",
+      "description": "Flood Fill, Rotten Oranges, Surrounded - Second half",
+      "focus_area": "Master Graphs Traversal",
+      "problem_ids": [
+        "QUESTION_9323_ID",
+        "QUESTION_9476_ID",
+        "QUESTION_4484_ID"
+      ]
+    },
+    {
+      "day": 49,
+      "topic": "Graphs Cycle & Topo (Part 1)",
+      "description": "Course Schedule, Alien Dictionary - First half",
+      "focus_area": "Master Graphs Cycle & Topo",
+      "problem_ids": [
+        "QUESTION_9717_ID",
+        "QUESTION_6142_ID",
+        "QUESTION_6693_ID",
+        "QUESTION_8801_ID"
+      ]
+    },
+    {
+      "day": 50,
+      "topic": "Graphs Cycle & Topo (Part 2)",
+      "description": "Course Schedule, Alien Dictionary - Second half",
+      "focus_area": "Master Graphs Cycle & Topo",
+      "problem_ids": [
+        "QUESTION_4582_ID",
+        "QUESTION_6183_ID",
+        "QUESTION_1352_ID"
+      ]
+    },
+    {
+      "day": 51,
+      "topic": "Graphs Shortest (Part 1)",
+      "description": "Dijkstra, Bellman-Ford, Floyd-Warshall - First half",
+      "focus_area": "Master Graphs Shortest",
+      "problem_ids": [
+        "QUESTION_8012_ID",
+        "QUESTION_1394_ID",
+        "QUESTION_8629_ID",
+        "QUESTION_1950_ID"
+      ]
+    },
+    {
+      "day": 52,
+      "topic": "Graphs Shortest (Part 2)",
+      "description": "Dijkstra, Bellman-Ford, Floyd-Warshall - Second half",
+      "focus_area": "Master Graphs Shortest",
+      "problem_ids": [
+        "QUESTION_3141_ID",
+        "QUESTION_6772_ID",
+        "QUESTION_5005_ID"
+      ]
+    },
+    {
+      "day": 53,
+      "topic": "DP Basics (Part 1) + DP Basics",
+      "description": "Fibonacci, Climbing, House Robber - First half",
+      "focus_area": "Master DP Basics",
+      "problem_ids": [
+        "QUESTION_7615_ID",
+        "QUESTION_1552_ID",
+        "QUESTION_6595_ID",
+        "QUESTION_5409_ID",
+        "QUESTION_5290_ID"
+      ]
+    },
+    {
+      "day": 54,
+      "topic": "DP Knapsack (Part 1)",
+      "description": "0/1 Knapsack, Partition, Target Sum - First half",
+      "focus_area": "Master DP Knapsack",
+      "problem_ids": [
+        "QUESTION_3369_ID",
+        "QUESTION_5668_ID",
+        "QUESTION_2497_ID"
+      ]
+    },
+    {
+      "day": 55,
+      "topic": "DP Knapsack (Part 2)",
+      "description": "0/1 Knapsack, Partition, Target Sum - Second half",
+      "focus_area": "Master DP Knapsack",
+      "problem_ids": [
+        "QUESTION_1689_ID",
+        "QUESTION_2931_ID",
+        "QUESTION_1351_ID"
+      ]
+    },
+    {
+      "day": 56,
+      "topic": "DP Strings (Part 1) + DP Strings",
+      "description": "LCS, Edit Distance, Palindromic Subseq - First half",
+      "focus_area": "Master DP Strings",
+      "problem_ids": [
+        "QUESTION_5966_ID",
+        "QUESTION_7863_ID",
+        "QUESTION_3403_ID",
+        "QUESTION_8178_ID",
+        "QUESTION_7762_ID"
+      ]
+    },
+    {
+      "day": 57,
+      "topic": "DP Stocks (Part 1) + DP Stocks",
+      "description": "Buy/Sell Stock variants - First half",
+      "focus_area": "Master DP Stocks",
+      "problem_ids": [
+        "QUESTION_1976_ID",
+        "QUESTION_2019_ID",
+        "QUESTION_9436_ID",
+        "QUESTION_1679_ID",
+        "QUESTION_4392_ID"
+      ]
+    },
+    {
+      "day": 58,
+      "topic": "Greedy (Part 1)",
+      "description": "Jump Game, Intervals, Gas Station - First half",
+      "focus_area": "Master Greedy",
+      "problem_ids": [
+        "QUESTION_2329_ID",
+        "QUESTION_8893_ID",
+        "QUESTION_5237_ID"
+      ]
+    },
+    {
+      "day": 59,
+      "topic": "Greedy (Part 2)",
+      "description": "Jump Game, Intervals, Gas Station - Second half",
+      "focus_area": "Master Greedy",
+      "problem_ids": [
+        "QUESTION_3654_ID",
+        "QUESTION_6491_ID",
+        "QUESTION_2511_ID"
+      ]
+    },
+    {
+      "day": 60,
+      "topic": "Miscellaneous (Part 1) + Miscellaneous",
+      "description": "Power Set, Merge Sorted, Pascal Triangle - First half",
+      "focus_area": "Master Miscellaneous",
+      "problem_ids": [
+        "QUESTION_1650_ID",
+        "QUESTION_8412_ID",
+        "QUESTION_6220_ID",
+        "QUESTION_4021_ID",
+        "QUESTION_9499_ID"
+      ]
+    }
+  ]
+}

@@ -1,362 +1,339 @@
 {
-  "title": "30-Day DSA Mastery Roadmap",
-  "description": "A structured 30-day plan to master Data Structures and Algorithms",
+  "version": "30-day-important",
+  "title": "30-Day DSA Roadmap (Important Problems)",
+  "description": "Curated most important problems for focused interview prep",
   "total_days": 30,
-  "total_problems": 84,
-  "difficulty_distribution": {
-    "easy": 20,
-    "medium": 50,
-    "hard": 14
-  },
+  "total_problems": 90,
   "days": [
     {
       "day": 1,
-      "topic": "Arrays & Hashing Basics",
-      "description": "Start with fundamental array and hashing problems",
+      "topic": "Arrays",
+      "description": "Two Sum, Subarray Sum, Best Time to Buy",
+      "focus_area": "Hashing, Prefix Sum",
       "problem_ids": [
-        1,
-        2,
-        3
-      ],
-      "focus_area": "Understanding hash maps and array operations"
+        "QUESTION_1324_ID",
+        "QUESTION_8977_ID",
+        "QUESTION_4160_ID"
+      ]
     },
     {
       "day": 2,
-      "topic": "Arrays & Hashing Continued",
-      "description": "More complex hashing problems",
+      "topic": "Arrays",
+      "description": "Kadane's, Sort Colors, Merge Intervals",
+      "focus_area": "Two Pointers, In-place",
       "problem_ids": [
-        4,
-        5,
-        6
-      ],
-      "focus_area": "Group anagrams, hash optimization"
+        "QUESTION_6712_ID",
+        "QUESTION_6185_ID",
+        "QUESTION_6433_ID"
+      ]
     },
     {
       "day": 3,
-      "topic": "Two Pointers - Basics",
-      "description": "Introduction to two-pointer technique",
+      "topic": "Arrays",
+      "description": "Rotate Matrix, Next Permutation, Spiral",
+      "focus_area": "Matrix rotation, Permutation",
       "problem_ids": [
-        7,
-        8,
-        9
-      ],
-      "focus_area": "Palindrome validation, sum problems"
+        "QUESTION_6737_ID",
+        "QUESTION_1243_ID",
+        "QUESTION_3970_ID"
+      ]
     },
     {
       "day": 4,
-      "topic": "Two Pointers - Advanced",
-      "description": "Complex two-pointer problems",
+      "topic": "Strings",
+      "description": "Longest Substring, Valid Anagram, Palindrome",
+      "focus_area": "Sliding Window, HashMap",
       "problem_ids": [
-        10,
-        11,
-        12,
-        13,
-        14
-      ],
-      "focus_area": "3Sum, container with most water, trapping rain water"
+        "QUESTION_7763_ID",
+        "QUESTION_2131_ID",
+        "QUESTION_2734_ID"
+      ]
     },
     {
       "day": 5,
-      "topic": "Arrays & Hashing - Review & Practice",
-      "description": "Review previous concepts and practice",
+      "topic": "Strings",
+      "description": "Group Anagrams, String to Integer, Count Vowels",
+      "focus_area": "Character frequency, Parsing",
       "problem_ids": [
-        15,
-        16
-      ],
-      "focus_area": "Encode-decode, top K frequent elements"
+        "QUESTION_7763_ID",
+        "QUESTION_2131_ID",
+        "QUESTION_2734_ID"
+      ]
     },
     {
       "day": 6,
-      "topic": "Stack - Basics",
-      "description": "Introduction to stack data structure",
+      "topic": "Binary Search",
+      "description": "Search Rotated Array, Find Peak, Median",
+      "focus_area": "Search space, Boundary",
       "problem_ids": [
-        17,
-        18,
-        19
-      ],
-      "focus_area": "Valid parentheses, min stack, basic stack operations"
+        "QUESTION_8531_ID",
+        "QUESTION_7965_ID",
+        "QUESTION_7033_ID"
+      ]
     },
     {
       "day": 7,
-      "topic": "Stack - Intermediate",
-      "description": "More complex stack problems",
+      "topic": "Recursion",
+      "description": "Subsets, Combination Sum, Subset Sum",
+      "focus_area": "Pick/Not-pick, Backtrack",
       "problem_ids": [
-        20,
-        21,
-        22
-      ],
-      "focus_area": "Daily temperatures, decode string, histogram"
+        "QUESTION_8263_ID",
+        "QUESTION_7502_ID",
+        "QUESTION_7528_ID"
+      ]
     },
     {
       "day": 8,
-      "topic": "Linked List - Basics",
-      "description": "Fundamental linked list operations",
+      "topic": "Recursion",
+      "description": "Permutations, N-Queen, Sudoku Solver",
+      "focus_area": "Backtracking, Pruning",
       "problem_ids": [
-        23,
-        24,
-        25
-      ],
-      "focus_area": "Reverse, merge, cycle detection"
+        "QUESTION_2764_ID",
+        "QUESTION_8263_ID",
+        "QUESTION_7502_ID"
+      ]
     },
     {
       "day": 9,
-      "topic": "Linked List - Intermediate",
-      "description": "More complex linked list problems",
+      "topic": "Linked List",
+      "description": "Reverse LL, Detect Cycle, Merge Two Sorted",
+      "focus_area": "Slow-Fast pointer",
       "problem_ids": [
-        26,
-        27,
-        28,
-        29,
-        30
-      ],
-      "focus_area": "Remove nth node, reorder, add two numbers, palindrome"
+        "QUESTION_7648_ID",
+        "QUESTION_8591_ID",
+        "QUESTION_3185_ID"
+      ]
     },
     {
       "day": 10,
-      "topic": "Linked List & Stack - Advanced",
-      "description": "Combining linked list and stack concepts",
+      "topic": "Linked List",
+      "description": "Copy Random List, Add Numbers, Flatten LL",
+      "focus_area": "Deep copy, Dummy node",
       "problem_ids": [
-        31
-      ],
-      "focus_area": "LRU Cache - complex data structure design"
+        "QUESTION_7648_ID",
+        "QUESTION_8591_ID",
+        "QUESTION_9422_ID"
+      ]
     },
     {
       "day": 11,
-      "topic": "Sliding Window - Basics",
-      "description": "Introduction to sliding window technique",
+      "topic": "Stacks",
+      "description": "Valid Parentheses, Min Stack, Next Greater",
+      "focus_area": "Monotonic stack",
       "problem_ids": [
-        32,
-        33
-      ],
-      "focus_area": "Max sum subarray, longest substring without repeats"
+        "QUESTION_8208_ID",
+        "QUESTION_3763_ID",
+        "QUESTION_6097_ID"
+      ]
     },
     {
       "day": 12,
-      "topic": "Sliding Window - Intermediate",
-      "description": "More complex sliding window problems",
+      "topic": "Stacks",
+      "description": "Largest Rectangle, Sliding Window Max, Postfix",
+      "focus_area": "Divide & Conquer, Deque",
       "problem_ids": [
-        34,
-        35,
-        36
-      ],
-      "focus_area": "Character replacement, permutation, minimum window"
+        "QUESTION_3422_ID",
+        "QUESTION_2939_ID",
+        "QUESTION_8208_ID"
+      ]
     },
     {
       "day": 13,
-      "topic": "Sliding Window - Advanced",
-      "description": "Complex sliding window optimizations",
+      "topic": "Trees",
+      "description": "Max Depth, Level Order, Invert Tree",
+      "focus_area": "DFS, BFS traversal",
       "problem_ids": [
-        37,
-        38,
-        39
-      ],
-      "focus_area": "Sliding window maximum, max points from cards, distinct subarrays"
+        "QUESTION_1218_ID",
+        "QUESTION_1044_ID",
+        "QUESTION_3926_ID"
+      ]
     },
     {
       "day": 14,
-      "topic": "Mid-Term Review",
-      "description": "Review and practice first 2 weeks",
+      "topic": "Trees",
+      "description": "Path Sum, Zigzag Level, Right Side View",
+      "focus_area": "Level-based, Path tracking",
       "problem_ids": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9,
-        10
-      ],
-      "focus_area": "Revisit fundamentals and strengthen weak areas"
+        "QUESTION_6037_ID",
+        "QUESTION_1218_ID",
+        "QUESTION_1638_ID"
+      ]
     },
     {
       "day": 15,
-      "topic": "Trees - Basics (DFS)",
-      "description": "Introduction to binary trees and DFS",
+      "topic": "Trees",
+      "description": "Serialize, Construct from Traversals, LCA",
+      "focus_area": "Tree construction, Recursion",
       "problem_ids": [
-        40,
-        41,
-        42,
-        43,
-        44
-      ],
-      "focus_area": "Invert tree, max depth, diameter, same tree, path sum"
+        "QUESTION_6037_ID",
+        "QUESTION_4014_ID",
+        "QUESTION_6321_ID"
+      ]
     },
     {
       "day": 16,
-      "topic": "Trees - Intermediate (DFS)",
-      "description": "More complex tree traversal problems",
+      "topic": "Trees",
+      "description": "Diameter, Max Path Sum, Flatten BT to LL",
+      "focus_area": "Global max, In-place modification",
       "problem_ids": [
-        45,
-        46,
-        47,
-        48
-      ],
-      "focus_area": "LCA, validate BST, path sum II, binary tree max path sum"
+        "QUESTION_4014_ID",
+        "QUESTION_6321_ID",
+        "QUESTION_8822_ID"
+      ]
     },
     {
       "day": 17,
-      "topic": "Trees - Advanced (Serialization)",
-      "description": "Advanced tree concepts",
+      "topic": "BST",
+      "description": "Search, Validate, Kth Smallest",
+      "focus_area": "BST property, Inorder",
       "problem_ids": [
-        49
-      ],
-      "focus_area": "Serialize and deserialize binary tree"
+        "QUESTION_8821_ID",
+        "QUESTION_8793_ID",
+        "QUESTION_2054_ID"
+      ]
     },
     {
       "day": 18,
-      "topic": "Graphs - Basics (DFS)",
-      "description": "Introduction to graphs using DFS",
+      "topic": "BST",
+      "description": "Floor/Ceiling, LCA of BST, Recover BST",
+      "focus_area": "BST operations, Error finding",
       "problem_ids": [
-        50,
-        51,
-        52,
-        53
-      ],
-      "focus_area": "Flood fill, number of islands, pacific atlantic, surrounded regions"
+        "QUESTION_6517_ID",
+        "QUESTION_8821_ID",
+        "QUESTION_8793_ID"
+      ]
     },
     {
       "day": 19,
-      "topic": "Binary Search - Basics",
-      "description": "Introduction to binary search",
+      "topic": "Heaps",
+      "description": "Kth Largest, Merge K Lists, Top K Frequent",
+      "focus_area": "Min/Max heap, Bucket sort",
       "problem_ids": [
-        54,
-        55,
-        56,
-        57
-      ],
-      "focus_area": "Standard binary search, 2D matrix, rotated sorted array"
+        "QUESTION_7654_ID",
+        "QUESTION_5879_ID",
+        "QUESTION_7928_ID"
+      ]
     },
     {
       "day": 20,
-      "topic": "Binary Search - Advanced",
-      "description": "Complex binary search optimizations",
+      "topic": "Tries",
+      "description": "Implement Trie, Word Search II, Word Break",
+      "focus_area": "Prefix tree, Backtracking",
       "problem_ids": [
-        58,
-        59,
-        60,
-        61
-      ],
-      "focus_area": "Min in rotated array, koko bananas, kth smallest, shipping capacity"
+        "QUESTION_9595_ID",
+        "QUESTION_2530_ID",
+        "QUESTION_2245_ID"
+      ]
     },
     {
       "day": 21,
-      "topic": "Heaps - Basics",
-      "description": "Introduction to heap data structure",
+      "topic": "Graphs",
+      "description": "Number of Islands, BFS, DFS",
+      "focus_area": "Matrix traversal, Components",
       "problem_ids": [
-        62,
-        63
-      ],
-      "focus_area": "Kth largest element, K closest points"
+        "QUESTION_1145_ID",
+        "QUESTION_4644_ID",
+        "QUESTION_2573_ID"
+      ]
     },
     {
       "day": 22,
-      "topic": "Heaps - Intermediate",
-      "description": "More complex heap problems",
+      "topic": "Graphs",
+      "description": "Clone Graph, Course Schedule, Graph Valid Tree",
+      "focus_area": "Cycle detection, Connectivity",
       "problem_ids": [
-        64,
-        65,
-        66,
-        67
-      ],
-      "focus_area": "Find K closest, merge K sorted lists, task scheduler, median"
+        "QUESTION_6873_ID",
+        "QUESTION_7728_ID",
+        "QUESTION_9323_ID"
+      ]
     },
     {
       "day": 23,
-      "topic": "Intervals - Basics",
-      "description": "Introduction to interval problems",
+      "topic": "Graphs",
+      "description": "Topological Sort, Alien Dictionary",
+      "focus_area": "Kahn's algo, DFS order",
       "problem_ids": [
-        68,
-        69,
-        70
-      ],
-      "focus_area": "Insert interval, merge intervals, non-overlapping"
+        "QUESTION_6693_ID",
+        "QUESTION_6873_ID",
+        "QUESTION_7728_ID"
+      ]
     },
     {
       "day": 24,
-      "topic": "Intervals - Advanced",
-      "description": "Complex interval scheduling",
+      "topic": "Graphs",
+      "description": "Dijkstra, Min Cost to Connect, Network Delay",
+      "focus_area": "Shortest path, Weighted edges",
       "problem_ids": [
-        71,
-        72
-      ],
-      "focus_area": "Meeting rooms, meeting rooms II"
+        "QUESTION_6693_ID",
+        "QUESTION_8012_ID",
+        "QUESTION_9717_ID"
+      ]
     },
     {
       "day": 25,
-      "topic": "Dynamic Programming - Basics",
-      "description": "Introduction to DP concepts",
+      "topic": "DP",
+      "description": "Climbing Stairs, House Robber, Frog Jump",
+      "focus_area": "Linear DP, State transition",
       "problem_ids": [
-        73,
-        74,
-        75
-      ],
-      "focus_area": "Climbing stairs, house robber, coin change"
+        "QUESTION_1552_ID",
+        "QUESTION_7615_ID",
+        "QUESTION_5409_ID"
+      ]
     },
     {
       "day": 26,
-      "topic": "Dynamic Programming - Intermediate",
-      "description": "More complex DP problems",
+      "topic": "DP",
+      "description": "0/1 Knapsack, Subset Sum, Partition Equal",
+      "focus_area": "Capacity/Target DP",
       "problem_ids": [
-        76,
-        77,
-        78,
-        79
-      ],
-      "focus_area": "LIS, LCS, unique paths, word break"
+        "QUESTION_1552_ID",
+        "QUESTION_7615_ID",
+        "QUESTION_5409_ID"
+      ]
     },
     {
       "day": 27,
-      "topic": "Backtracking - Basics",
-      "description": "Introduction to backtracking technique",
+      "topic": "DP",
+      "description": "LCS, Edit Distance, Longest Palindromic",
+      "focus_area": "2D DP, String DP",
       "problem_ids": [
-        80,
-        81,
-        82
-      ],
-      "focus_area": "Subsets, permutations, combination sum"
+        "QUESTION_2497_ID",
+        "QUESTION_1689_ID",
+        "QUESTION_5668_ID"
+      ]
     },
     {
       "day": 28,
-      "topic": "Backtracking - Advanced",
-      "description": "Complex backtracking problems",
+      "topic": "DP",
+      "description": "Stock Buy/Sell variants, Maximum Product",
+      "focus_area": "State machine, Multi-state",
       "problem_ids": [
-        83,
-        84
-      ],
-      "focus_area": "Word search, palindrome partitioning"
+        "QUESTION_4392_ID",
+        "QUESTION_1976_ID",
+        "QUESTION_2019_ID"
+      ]
     },
     {
       "day": 29,
-      "topic": "Final Review & Mixed Problems",
-      "description": "Solve a mix of problems from all topics",
+      "topic": "Greedy",
+      "description": "Jump Game, Activity Selection, Gas Station",
+      "focus_area": "Greedy proof, Local/global optima",
       "problem_ids": [
-        15,
-        22,
-        31,
-        49,
-        62,
-        75,
-        84
-      ],
-      "focus_area": "Reinforce all learned concepts"
+        "QUESTION_8893_ID",
+        "QUESTION_2511_ID",
+        "QUESTION_2329_ID"
+      ]
     },
     {
       "day": 30,
-      "topic": "Mock Interview & Assessment",
-      "description": "Simulate real interview scenarios",
+      "topic": "Final Mix",
+      "description": "Mixed hard problems, Revision day",
+      "focus_area": "Cross-topic, Speed practice",
       "problem_ids": [
-        1,
-        10,
-        20,
-        40,
-        54,
-        62,
-        73,
-        80
-      ],
-      "focus_area": "Time management, problem-solving under pressure"
+        "QUESTION_1650_ID",
+        "QUESTION_6220_ID",
+        "QUESTION_8412_ID"
+      ]
     }
   ]
 }

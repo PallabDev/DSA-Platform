@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AlgoFlow | DSA Roadmap</title>
   <link rel="stylesheet" href="/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 <body class="onboarding-body">
   <div class="onboarding-container">
@@ -17,10 +18,22 @@
       </svg>
     </div>
     <h1 class="onboarding-title">AlgoFlow</h1>
-    <p class="onboarding-subtitle">30-Day DSA Mastery Roadmap</p>
+    <p class="onboarding-subtitle">DSA Mastery Roadmap</p>
     <div class="onboarding-form">
       <label for="username" class="input-label">What should we call you?</label>
       <input type="text" id="username" class="input-field" placeholder="Enter your name..." autofocus>
+      <div class="roadmap-picker">
+        <label class="picker-option active" data-mode="30">
+          <input type="radio" name="roadmap-mode" value="30" checked>
+          <span class="picker-label">30 Days</span>
+          <span class="picker-desc">Important problems only</span>
+        </label>
+        <label class="picker-option" data-mode="60">
+          <input type="radio" name="roadmap-mode" value="60">
+          <span class="picker-label">60 Days</span>
+          <span class="picker-desc">Complete coverage</span>
+        </label>
+      </div>
       <button id="startBtn" class="btn-primary" onclick="startJourney()">
         Start Journey
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
@@ -28,12 +41,20 @@
         </svg>
       </button>
     </div>
-    <p class="onboarding-hint">84 problems &middot; 30 days &middot; One step at a time</p>
+    <p class="onboarding-hint">193 problems &middot; 30 or 60 days &middot; One step at a time</p>
   </div>
 
   <script>
     const existing = localStorage.getItem('dsa_username');
     if (existing) window.location.href = '/dashboard';
+
+    // Picker interaction
+    document.querySelectorAll('.picker-option').forEach(opt => {
+      opt.addEventListener('click', () => {
+        document.querySelectorAll('.picker-option').forEach(o => o.classList.remove('active'));
+        opt.classList.add('active');
+      });
+    });
 
     document.getElementById('username').addEventListener('keydown', e => {
       if (e.key === 'Enter') startJourney();
@@ -45,10 +66,56 @@
         document.getElementById('username').focus();
         return;
       }
+      const mode = document.querySelector('input[name="roadmap-mode"]:checked').value;
       localStorage.setItem('dsa_username', name);
       localStorage.setItem('dsa_start_date', new Date().toISOString().split('T')[0]);
-      window.location.href = '/dashboard';
+      localStorage.setItem('dsa_mode', mode);
+      window.location.href = '/dashboard?mode=' + mode;
     }
+
+    // GSAP entrance animation
+    gsap.fromTo('.onboarding-container', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' });
+    gsap.fromTo('.logo-icon', { scale: 0.8, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, delay: 0.2, ease: 'back.out(1.7)' });
+    gsap.fromTo('.onboarding-title', { y: 10, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, delay: 0.35, ease: 'power2.out' });
+    gsap.fromTo('.onboarding-subtitle', { y: 10, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, delay: 0.45, ease: 'power2.out' });
+    gsap.fromTo('.onboarding-form', { y: 10, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, delay: 0.55, ease: 'power2.out' });
   </script>
+
+  <style>
+    .roadmap-picker {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 4px;
+    }
+    .picker-option {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 12px;
+      border: 2px solid var(--border-color);
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+    }
+    .picker-option input { display: none; }
+    .picker-option.active {
+      border-color: var(--chai-dark);
+      background: var(--chai-cream);
+    }
+    .picker-option:hover:not(.active) {
+      border-color: var(--chai-light);
+    }
+    .picker-label {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .picker-desc {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+  </style>
 </body>
 </html>

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard | AlgoFlow</title>
   <link rel="stylesheet" href="/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 <body>
   <div class="app">
@@ -20,6 +21,10 @@
       </div>
       <div class="nav-user">
         <span id="greeting" class="greeting-text"></span>
+        <div class="mode-switcher">
+          <button class="mode-btn active" data-mode="30" onclick="switchMode('30')">30-Day</button>
+          <button class="mode-btn" data-mode="60" onclick="switchMode('60')">60-Day</button>
+        </div>
         <button class="btn-reset" onclick="resetProgress()" title="Reset Progress">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
             <path d="M1 4v6h6M23 20v-6h-6"/>
@@ -39,8 +44,8 @@
           <div class="progress-fill" id="progressFill"></div>
         </div>
         <div class="progress-stats">
-          <span id="solvedCount">0 / 84 solved</span>
-          <span id="dayStatus">Day 1 of 30</span>
+          <span id="solvedCount">0 / 0 solved</span>
+          <span id="dayStatus">Day 1</span>
         </div>
       </div>
 
@@ -72,20 +77,26 @@
   </div>
 
   <script>
-    const roadmap = <%- JSON.stringify(roadmap) %>;
-    const allProblems = <%- JSON.stringify(problems) %>;
+    const roadmapData = <%- JSON.stringify(roadmap) %>;
+    const allProblems = <%- JSON.stringify(allProblems) %>;
+    const currentMode = '<%- mode %>';
 
     let progress = JSON.parse(localStorage.getItem('dsa_progress') || '{}');
     let username = localStorage.getItem('dsa_username') || 'Coder';
     let startDate = localStorage.getItem('dsa_start_date') || new Date().toISOString().split('T')[0];
+    let activeMode = localStorage.getItem('dsa_mode') || currentMode;
 
     document.getElementById('greeting').textContent = 'Welcome, ' + username;
+
+    function getMaxDays() {
+      return activeMode === '60' ? 60 : 30;
+    }
 
     function getCurrentDay() {
       const start = new Date(startDate);
       const now = new Date();
       const diff = Math.floor((now - start) / (1000 * 60 * 60 * 24)) + 1;
-      return Math.max(1, Math.min(diff, 30));
+      return Math.max(1, Math.min(diff, getMaxDays()));
     }
 
     function getDayStatus(dayNum) {
@@ -96,13 +107,13 @@
     }
 
     function updateProgress() {
-      const total = 84;
+      const total = roadmapData.total_problems;
       const solved = Object.values(progress).filter(v => v).length;
-      const pct = Math.round((solved / total) * 100);
+      const pct = total > 0 ? Math.round((solved / total) * 100) : 0;
       document.getElementById('progressPercent').textContent = pct + '%';
       document.getElementById('progressFill').style.width = pct + '%';
       document.getElementById('solvedCount').textContent = solved + ' / ' + total + ' solved';
-      document.getElementById('dayStatus').textContent = 'Day ' + getCurrentDay() + ' of 30';
+      document.getElementById('dayStatus').textContent = 'Day ' + getCurrentDay() + ' of ' + getMaxDays();
     }
 
     function toggleProblem(id) {
@@ -112,90 +123,82 @@
       renderAll();
     }
 
-    function renderProblemCard(problem, day) {
+    function renderProblemCard(problem) {
       const isSolved = progress[problem.id] || false;
       const statusClass = isSolved ? 'solved' : '';
-      const diffClass = problem.problem_type;
-      const dayStatus = getDayStatus(day.day);
-      const statusBadge = dayStatus === 'today' ? '<span class="badge badge-today">Today</span>' :
-                          dayStatus === 'past' ? '<span class="badge badge-done">Done</span>' :
-                          '<span class="badge badge-upcoming">Upcoming</span>';
+      const levelClass = (problem.level || '').toLowerCase();
+      const companies = (problem.companyTags || []).slice(0, 3);
 
       return '<div class="problem-card ' + statusClass + '">' +
         '<div class="problem-header">' +
           '<label class="checkbox-wrap">' +
-            '<input type="checkbox" ' + (isSolved ? 'checked' : '') + ' onchange="toggleProblem(' + problem.id + ')">' +
+            '<input type="checkbox" ' + (isSolved ? 'checked' : '') + ' onchange="toggleProblem(\'' + problem.id + '\')">' +
             '<span class="checkmark"></span>' +
           '</label>' +
           '<div class="problem-info">' +
-            '<span class="problem-name">' + problem.name + '</span>' +
-            '<span class="problem-num">#' + problem.id + '</span>' +
+            '<a href="' + (problem.leetcode || '#') + '" target="_blank" class="problem-name">' + problem.name + '</a>' +
           '</div>' +
           '<div class="problem-meta">' +
-            '<span class="diff-tag ' + diffClass + '">' + problem.problem_type + '</span>' +
-            statusBadge +
+            '<span class="diff-tag ' + levelClass + '">' + (problem.level || '') + '</span>' +
+            (problem.avgTime ? '<span class="avg-time">' + problem.avgTime + '</span>' : '') +
           '</div>' +
         '</div>' +
-        '<div class="problem-links">' +
-          '<a href="' + problem.leetcode + '" target="_blank" class="link-leetcode">' +
-            '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>' +
-            ' LeetCode' +
-          '</a>' +
-          (problem.take_u_forward !== 'Not Found' ?
-            '<a href="' + problem.take_u_forward + '" target="_blank" class="link-video">' +
-              '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>' +
-              ' Video' +
-            '</a>' : '') +
-        '</div>' +
+        (companies.length > 0 ?
+          '<div class="problem-tags">' +
+            companies.map(c => '<span class="company-tag">' + c + '</span>').join('') +
+          '</div>' : '') +
       '</div>';
     }
 
     function renderToday() {
       const currentDay = getCurrentDay();
-      const dayData = roadmap.days.find(d => d.day === currentDay) || roadmap.days[0];
+      const dayData = roadmapData.days.find(d => d.day === currentDay) || roadmapData.days[0];
+      if (!dayData) return;
+
       let html = '<div class="section-header">' +
         '<div>' +
           '<h2 class="section-title">Day ' + dayData.day + ': ' + dayData.topic + '</h2>' +
-          '<p class="section-desc">' + dayData.description + '</p>' +
+          '<p class="section-desc">' + (dayData.description || '') + '</p>' +
         '</div>' +
         '<span class="badge badge-today">Today</span>' +
       '</div>' +
-      '<div class="focus-area"><strong>Focus:</strong> ' + dayData.focus_area + '</div>' +
+      '<div class="focus-area"><strong>Focus:</strong> ' + (dayData.focus_area || '') + '</div>' +
       '<div class="problems-grid">';
 
-      dayData.problems.forEach(p => {
-        html += renderProblemCard(p, dayData);
+      (dayData.problems || []).forEach(p => {
+        html += renderProblemCard(p);
       });
 
       html += '</div>';
       document.getElementById('tab-today').innerHTML = html;
+      animateCards('#tab-today .problem-card');
     }
 
     function renderUpcoming() {
       const currentDay = getCurrentDay();
       let html = '';
 
-      if (currentDay < 30) {
-        const nextDay = roadmap.days.find(d => d.day === currentDay + 1);
+      if (currentDay < getMaxDays()) {
+        const nextDay = roadmapData.days.find(d => d.day === currentDay + 1);
         if (nextDay) {
           html += '<div class="section-header">' +
             '<div>' +
               '<h2 class="section-title">Day ' + nextDay.day + ': ' + nextDay.topic + '</h2>' +
-              '<p class="section-desc">' + nextDay.description + '</p>' +
+              '<p class="section-desc">' + (nextDay.description || '') + '</p>' +
             '</div>' +
             '<span class="badge badge-upcoming">Next</span>' +
           '</div>' +
-          '<div class="focus-area"><strong>Focus:</strong> ' + nextDay.focus_area + '</div>' +
+          '<div class="focus-area"><strong>Focus:</strong> ' + (nextDay.focus_area || '') + '</div>' +
           '<div class="problems-grid">';
 
-          nextDay.problems.forEach(p => {
-            html += renderProblemCard(p, nextDay);
+          (nextDay.problems || []).forEach(p => {
+            html += renderProblemCard(p);
           });
           html += '</div>';
         }
       }
 
-      const backlogDays = roadmap.days.filter(d => d.day < currentDay && !isDayComplete(d));
+      const backlogDays = roadmapData.days.filter(d => d.day < currentDay && !isDayComplete(d));
       if (backlogDays.length > 0) {
         html += '<div class="section-header backlog-header">' +
           '<div>' +
@@ -205,14 +208,14 @@
         '</div>';
 
         backlogDays.forEach(day => {
-          const unsolved = day.problems.filter(p => !progress[p.id]);
+          const unsolved = (day.problems || []).filter(p => !progress[p.id]);
           if (unsolved.length === 0) return;
           html += '<div class="backlog-day">' +
             '<h3 class="backlog-day-title">Day ' + day.day + ': ' + day.topic + ' <span class="backlog-count">' + unsolved.length + ' pending</span></h3>' +
             '<div class="problems-grid">';
 
           unsolved.forEach(p => {
-            html += renderProblemCard(p, day);
+            html += renderProblemCard(p);
           });
           html += '</div></div>';
         });
@@ -223,20 +226,22 @@
       }
 
       document.getElementById('tab-upcoming').innerHTML = html;
+      animateCards('#tab-upcoming .problem-card');
     }
 
     function isDayComplete(day) {
-      return day.problems.every(p => progress[p.id]);
+      return (day.problems || []).every(p => progress[p.id]);
     }
 
     function renderAll() {
       let html = '<div class="roadmap-list">';
 
-      roadmap.days.forEach(day => {
+      roadmapData.days.forEach(day => {
         const dayComplete = isDayComplete(day);
         const dayStatus = getDayStatus(day.day);
-        const solvedCount = day.problems.filter(p => progress[p.id]).length;
-        const statusIcon = dayComplete ? '&#10003;' : solvedCount + '/' + day.problems.length;
+        const solvedCount = (day.problems || []).filter(p => progress[p.id]).length;
+        const totalProblems = (day.problems || []).length;
+        const statusIcon = dayComplete ? '&#10003;' : solvedCount + '/' + totalProblems;
         let statusCls = dayComplete ? 'day-complete' : '';
         if (dayStatus === 'today') statusCls += ' day-current';
 
@@ -246,7 +251,7 @@
               '<span class="day-num">' + day.day + '</span>' +
               '<div class="day-info">' +
                 '<span class="day-topic">' + day.topic + '</span>' +
-                '<span class="day-meta">' + day.problems.length + ' problems &middot; ' + day.focus_area + '</span>' +
+                '<span class="day-meta">' + totalProblems + ' problems' + (day.focus_area ? ' &middot; ' + day.focus_area : '') + '</span>' +
               '</div>' +
             '</div>' +
             '<div class="day-right">' +
@@ -256,8 +261,8 @@
           '</div>' +
           '<div class="day-problems">';
 
-        day.problems.forEach(p => {
-          html += renderProblemCard(p, day);
+        (day.problems || []).forEach(p => {
+          html += renderProblemCard(p);
         });
 
         html += '</div></div>';
@@ -265,11 +270,19 @@
 
       html += '</div>';
       document.getElementById('tab-all').innerHTML = html;
+      animateCards('#tab-all .problem-card');
     }
 
     function toggleDay(header) {
       const dayEl = header.closest('.roadmap-day');
+      const wasExpanded = dayEl.classList.contains('expanded');
       dayEl.classList.toggle('expanded');
+
+      // Animate problems inside
+      if (!wasExpanded) {
+        const cards = dayEl.querySelectorAll('.problem-card');
+        gsap.fromTo(cards, { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.3, stagger: 0.05, ease: 'power2.out' });
+      }
     }
 
     function switchTab(tab) {
@@ -283,6 +296,12 @@
       if (tab === 'all') renderAll();
     }
 
+    function switchMode(mode) {
+      activeMode = mode;
+      localStorage.setItem('dsa_mode', mode);
+      window.location.href = '/dashboard?mode=' + mode;
+    }
+
     function resetProgress() {
       if (confirm('Reset all progress? This cannot be undone.')) {
         progress = {};
@@ -292,6 +311,26 @@
         switchTab('today');
       }
     }
+
+    function animateCards(selector) {
+      const cards = document.querySelectorAll(selector);
+      if (cards.length === 0) return;
+      gsap.fromTo(cards, { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.35, stagger: 0.04, ease: 'power2.out' });
+    }
+
+    // Init mode switcher UI
+    document.querySelectorAll('.mode-btn').forEach(btn => {
+      if (btn.dataset.mode === activeMode) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+
+    // Page load animation
+    gsap.fromTo('.navbar', { y: -20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, ease: 'power2.out' });
+    gsap.fromTo('.progress-bar-container', { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, delay: 0.1, ease: 'power2.out' });
+    gsap.fromTo('.tab-bar', { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.4, delay: 0.2, ease: 'power2.out' });
 
     updateProgress();
     switchTab('today');
