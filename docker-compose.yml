@@ -1,0 +1,7 @@
+services:
+  algoflow:
+    build: .
+    container_name: algoflow
+    ports:
+      - "7853:7853"
+    restart: unless-stopped

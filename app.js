@@ -34,5 +34,5 @@ app.get('/dashboard', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Chai and Code running at http://localhost:${PORT}`);
+  console.log(`AlgoFlow running at http://localhost:${PORT}`);
 });
